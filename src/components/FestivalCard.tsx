@@ -19,9 +19,9 @@ const FestivalCard: React.FC<FestivalCardProps> = ({
   url,
 }) => {
   return (
-    <div className="flex gap-1 m-2 py-8 items-start">
+    <div className="flex gap-5 m-2 py-8 items-start">
       <img src={logo} alt={name} width={200} />
-      <div className="flex flex-col justify-start items-start">
+      <div className="flex flex-col justify-start items-start ">
         <p className="font-bold text-xl">{name}</p>
         <p className="font-semibold">{description}</p>
         <p className="font-semibold">Lieu : {location}</p>

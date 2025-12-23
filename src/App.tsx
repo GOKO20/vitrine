@@ -3,19 +3,22 @@ import logoDefqon from "./assets/logoDefqon.png";
 import tomorrowlandLogo from "./assets/tomorrowlandLogo.png";
 import rotterdameRaveLogo from "./assets/rotterdameRaveLogo.png";
 import FestivalCard from "./components/FestivalCard.tsx";
-import ThemeToggle from "./components/ThemeToggle.tsx";
+
+import NavBar from "./components/navBar.tsx";
 
 function App() {
   return (
     <div className="min-h-screen">
-      <div className="absolute top-4 right-4">
-        <ThemeToggle />
-      </div>
-      <div className="flex flex-col">
-        <div className="underline underline-offset-5">
-          <h1>Liste des events 2026</h1>
-        </div>
-        <div className="grid grid-cols-2 gap-4">
+      <NavBar
+        title="MonSite"
+        items={[
+          { label: "Accueil", href: "/" },
+          { label: "Liste des festivals prevu", href: "/Liste" },
+        ]}
+      />
+
+      <div className="flex justify-center items-center min-h-[80vh]">
+        <div className="grid grid-cols-2 gap-10">
           <div>
             {/* Defqon */}
             <FestivalCard
