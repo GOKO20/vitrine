@@ -11,23 +11,23 @@ function App() {
       <div className="absolute top-4 right-4">
         <ThemeToggle />
       </div>
-      <div className="flex flex-col">      
-          <div className="underline underline-offset-5">
-            <h1>Liste des events 2026</h1>
+      <div className="flex flex-col">
+        <div className="underline underline-offset-5">
+          <h1>Liste des events 2026</h1>
+        </div>
+        <div className="grid grid-cols-2 gap-4">
+          <div>
+            {/* Defqon */}
+            <FestivalCard
+              logo={logoDefqon}
+              name="Defqon 1"
+              description="Le plus gros festival des Pays-Bas"
+              location="Pays-Bas"
+              price={180}
+              url="https://www.defqon1.com"
+            />
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              {/* Defqon */}
-              <FestivalCard
-                logo={logoDefqon}
-                name="Defqon 1"
-                description="Le plus gros festival des Pays-Bas"
-                location="Pays-Bas"
-                price={180}
-                url="https://www.defqon1.com"
-              />
-            </div>
-            <div>
+          <div>
             {/* rotterdameRave */}
             <FestivalCard
               logo={rotterdameRaveLogo}
@@ -37,20 +37,20 @@ function App() {
               price={70}
               url="https://www.rotterdamrave.com/"
             />
-            </div>
-            <div>
-              {/* Tomorrowland */}
-              <FestivalCard
-                logo={tomorrowlandLogo}
-                name="Tomorrowland"
-                description="Le plus gros festival du monde"
-                location="Belgique (Boom)"
-                price={180}
-                url="https://www.tomorrowland.com"
-              />
-            </div>
-          </div>        
-    </div>
+          </div>
+          <div>
+            {/* Tomorrowland */}
+            <FestivalCard
+              logo={tomorrowlandLogo}
+              name="Tomorrowland"
+              description="Le plus gros festival du monde"
+              location="Belgique (Boom)"
+              price={180}
+              url="https://www.tomorrowland.com"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
